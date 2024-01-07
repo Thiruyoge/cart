@@ -44,9 +44,7 @@ export const { addItem, removeItem, updateQuantity } = cartSlice.actions;
 const CartItem = ({ id, name, price, quantity }) => {
   const dispatch = useDispatch();
 
-  const handleQuantityChange = e => {
-    dispatch(updateQuantity({ id, quantity: parseInt(e.target.value, 10) || 0 }));
-  };
+
 
   return (
     <div class="card">
